@@ -4,3 +4,8 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+const add = document.querySelector("#add");
+const ipc = require("electron").ipcRenderer;
+add.onclick = () => {
+  ipc.send("add");
+};
